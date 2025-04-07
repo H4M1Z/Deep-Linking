@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // Read sessionId from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get("sessionId");
+
+        if (sessionId) {
+            // Redirect to your app's custom scheme
+            window.location.href = `dinnduh://session/${sessionId}`;
+        } else {
+            document.write("Invalid link: no session ID provided.");
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting to app...</p>
+</body>
+
+</html>
